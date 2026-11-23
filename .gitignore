@@ -1,0 +1,24 @@
+# 坚果留学官网 - Git 忽略清单
+# 说明：这些目录/文件是本地辅助产物，不是网站运行必需，不进版本库
+
+# 部署包（重复内容，体积大）
+deploy/
+
+# 本地预览服务器脚本
+local-server/
+
+# 历史归档
+_archive/
+
+# WorkBuddy 工具数据
+.workbuddy/
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 临时文件
+*.tmp
+*.log
+*.crdownload
