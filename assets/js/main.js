@@ -213,16 +213,31 @@
       '</div>' +
       '<div class="story-body">';
 
+    // 公众号原文里的纯装饰图（蝴蝶、闪片、栏目小图标等），不放进正文
+    var decorative = {
+      s4: ['img-02.gif', 'img-03.gif', 'img-04.gif', 'img-05.gif', 'img-06.gif', 'img-07.gif', 'img-08.gif', 'img-23.png', 'img-28.png', 'img-29.png', 'img-30.gif', 'img-32.gif']
+    }[story.id] || [];
+    function isDecorative(src) {
+      for (var di = 0; di < decorative.length; di++) {
+        if (src.indexOf(decorative[di]) >= 0) return true;
+      }
+      return false;
+    }
+
     story.blocks.forEach(function (b) {
       if (b.type === 'h2') html += '<h2>' + b.text + '</h2>';
       else if (b.type === 'h3') html += '<h3>' + b.text + '</h3>';
       else if (b.type === 'p') html += '<p>' + b.text + '</p>';
       else if (b.type === 'figure') {
-        html += '<figure class="story-figure story-auto"><img src="' + b.src + '" alt="原文图片" loading="lazy"></figure>';
+        if (!isDecorative(b.src)) {
+          html += '<figure class="story-figure story-auto"><img src="' + b.src + '" alt="原文图片" loading="lazy"></figure>';
+        }
       } else if (b.type === 'emojis') {
-        // 先按普通图片渲染，加载后自动隐藏纯装饰的小图（蝴蝶、闪片、栏目小图标等）
+        // 真实图片保留，装饰小图跳过
         b.images.forEach(function (src) {
-          html += '<figure class="story-figure story-auto"><img src="' + src + '" alt="原文图片" loading="lazy"></figure>';
+          if (!isDecorative(src)) {
+            html += '<figure class="story-figure story-auto"><img src="' + src + '" alt="原文图片" loading="lazy"></figure>';
+          }
         });
       }
       // 'decor' 类型（栏目装饰图）按需求不展示
