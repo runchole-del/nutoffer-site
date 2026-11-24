@@ -20,7 +20,7 @@
 - 共享样式：`assets/css/style.css`（原首页内联样式已抽取，保留原配色/圆角设计系统）
 - 共享组件：`assets/js/components.js`（导航、页脚、联系方式集中维护）
 - 共享数据与交互：`assets/js/data.js`（团队、案例、公众号申请故事、新闻、岗位示意数据）、`assets/js/main.js`（菜单、筛选、FAQ、新闻/故事详情渲染）
-- 公众号 11 篇申请/就读故事已完整搬运：文字 + 本地图片（聊天记录、offer、表情包、感谢信），素材位于 `assets/stories/story-1/`（13 张）、`story-2/`（21 张）、`story-3/`（23 张）、`story-4/`（32 张）、`story-5/`（19 张）、`story-6/`（16 张）、`story-7/`（16 张）、`story-8/`（14 张）、`story-9/`（23 张）、`story-10/`（12 张）、`story-11/`（17 张）
+- 公众号 12 篇申请/就读故事已完整搬运：文字 + 本地图片（聊天记录、offer、表情包、感谢信），素材位于 `assets/stories/story-1/`（13 张）、`story-2/`（21 张）、`story-3/`（23 张）、`story-4/`（32 张）、`story-5/`（19 张）、`story-6/`（16 张）、`story-7/`（16 张）、`story-8/`（14 张）、`story-9/`（23 张）、`story-10/`（12 张）、`story-11/`（17 张）、`story-12/`（11 张）
 - 响应式已保留并扩展，手机折叠菜单、卡片筛选、FAQ 折叠均已实测可用
 - 团队真实头像已本地化到 `assets/team/`（6 张，来自公众号原文）；其余图片素材在 `assets/` 目录，多为示意图，**需替换为客户真实素材**
 
@@ -45,7 +45,7 @@
 2. `about.html` 关于我们 — 公司故事、使命愿景、6 位团队老师完整介绍、投资人/合作伙伴占位、加入我们入口 ✅
 3. `services.html` 产品服务 — 4 项服务详情、服务流程 6 步、常见问题 ✅
 4. `cases.html` 成功案例 — 6 张学生故事卡片，可按国家/地区与学历筛选 ✅
-5. `stories.html` / `story.html` 申请故事 — 公众号原文搬运列表 + 详情（通过 `?id=` 读取）✅（已搬运 11 篇：s1–s11；首页 Success Stories 仍保留 3 卡构图）
+5. `stories.html` / `story.html` 申请故事 — 公众号原文搬运列表 + 详情（通过 `?id=` 读取）✅（已搬运 12 篇：s1–s12；首页 Success Stories 仍保留 3 卡构图）
 6. `news.html` / `news-detail.html` 新闻资讯 — 列表 + 详情（通过 `?id=` 读取）✅
 7. `contact.html` 联系我们 — 公司电话、老师手机、微信二维码、办公地址（不接后台表单）✅
 8. `join.html` 加入我们 — 招聘岗位、职位详情、投递方式 ✅
@@ -103,7 +103,7 @@
 
 - **当前工作目录**：`D:\nutoffer`（所有开发成果都已放在这里）
 - **网站根目录**：`D:\nutoffer` 本身（`*.html` + `assets/`）。发布时把这个目录里的网页文件和 `assets/` 上传到静态托管即可，**不要**上传 `deploy/`、`local-server/`、`_archive/`、`.workbuddy/`。
-- **现成部署包**：`D:\nutoffer\deploy\nutoffer-site.zip`，重新打包后包含全部 11 篇故事及本地图片，路径均为标准 `/`，解压后直接可传 Netlify / Cloudflare Pages / GitHub Pages / OSS。
+- **现成部署包**：`D:\nutoffer\deploy\nutoffer-site.zip`，重新打包后包含全部 12 篇故事及本地图片，路径均为标准 `/`，解压后直接可传 Netlify / Cloudflare Pages / GitHub Pages / OSS。
 - **本地内部预览**：双击 `D:\nutoffer\local-server\START-SITE.bat` 启动；Windows 计划任务 `NutOfferLocalSite` 已配置为登录后自动启动；日志在 `local-server\server.log`。
 - 同事访问需先**以管理员身份**运行 `local-server\ALLOW-FIREWALL.bat` 放行 8080 端口（脚本已覆盖 domain/private/public 三种防火墙配置文件；当前 WLAN 已改为「专用网络」，本机与局域网预览均已验证可打开）。
 - 当前内网地址 `http://192.168.1.220:8080/`（换网络后 IP 会变，用 `ipconfig` 查 WLAN 的 IPv4 地址再替换）。本机自测可用 `http://127.0.0.1:8080/`。
@@ -124,6 +124,7 @@
    - s9《申请故事｜予以音乐人的无限可能，助力西安音乐学院才子斩获纽大、伯克利等名校offer》：`https://mp.weixin.qq.com/s/-TxG-nkduOS-rsDhi16CRA`，23 张图 → `assets/stories/story-9/`
    - s10《申请故事｜来自杨同学妈妈-北外博士兼英语系教授的肯定》：`https://mp.weixin.qq.com/s/xNOBdggGp5vKnJkG1NAOig`，12 张图 → `assets/stories/story-10/`
    - s11《申请故事｜梦想的光照进现实，KCL的奇迹录取之路》：`https://mp.weixin.qq.com/s/ZMYBwUmj4S4_D1xxHNtzJA`，17 张图 → `assets/stories/story-11/`
+   - s12《申请故事｜我又划着我的断桨出发了——低GPA逆袭港大申请全历程》：`https://mp.weixin.qq.com/s/CEOCd-Et2yWpmIdFHPXzNA`，11 张图 → `assets/stories/story-12/`
 
 ## 八、给接手者的建议任务
 
@@ -133,5 +134,5 @@
 - [x] 保持响应式与现有设计语言
 - [x] 表单不做后端，联系方式直接展示电话/手机/微信二维码
 - [ ] 替换第六节列出的占位内容（电话、手机号、二维码、示意图）
-- [x] 继续搬运公众号申请故事：每篇在 `assets/js/data.js` 的 `STORIES` 中新增一条，图片放 `assets/stories/story-N/`（当前已搬运 11 篇：s1–s11；科普读物、讲座、其他账号内容均已排除）
+- [x] 继续搬运公众号申请故事：每篇在 `assets/js/data.js` 的 `STORIES` 中新增一条，图片放 `assets/stories/story-N/`（当前已搬运 12 篇：s1–s12；科普读物、讲座、其他账号内容均已排除）
 - [ ] 域名注册后，用 `deploy\nutoffer-site.zip` 发布并绑定正式域名
